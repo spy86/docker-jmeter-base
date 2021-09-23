@@ -34,7 +34,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: spy86/docker-jmeter-base:${{ steps.date.outputs.date }}
+          tags: spy86/jmeter-base:${{ steps.date.outputs.date }}
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
