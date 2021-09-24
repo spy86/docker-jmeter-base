@@ -1,5 +1,5 @@
 # Use Java 8 slim JRE
-FROM openjdk:17-ea-22-jdk-oracle
+FROM openjdk:8-jre-slim
 MAINTAINER Maciej Michalski <maciej.michalsk@gmail.com>
 
 # JMeter version
