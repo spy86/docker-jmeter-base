@@ -1,18 +1,18 @@
-# Use Java 8 slim JRE
 FROM openjdk:17-ea-22-jdk-oracle
-MAINTAINER Maciej Michalski <maciej.michalsk@gmail.com>
 
 # JMeter version
 ARG JMETER_VERSION=5.0
 
 # Install few utilities
-RUN apt-get clean && \
-    apt-get update && \
-    apt-get -qy install \
+RUN set -eux; \
+        microdnf install \
+                gzip \
                 wget \
                 telnet \
-                iputils-ping \
-                unzip
+                unzip \
+                iputils \
+                ; \
+        microdnf clean all
 
 # Install JMeter
 RUN   mkdir /jmeter \
