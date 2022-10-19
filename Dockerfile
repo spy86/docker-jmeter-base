@@ -5,14 +5,14 @@ ARG JMETER_VERSION=5.0
 
 # Install few utilities
 RUN set -eux; \
-        microdnf install \
+        apt-get install \
                 gzip \
                 wget \
                 telnet \
                 unzip \
                 iputils \
                 ; \
-        microdnf clean all
+        apt-get clean all
 
 # Install JMeter
 RUN   mkdir /jmeter \
