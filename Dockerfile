@@ -4,15 +4,11 @@ FROM openjdk:20-ea-16-slim-bullseye
 ARG JMETER_VERSION=5.0
 
 # Install few utilities
-RUN set -eux; \
-        microdnf install \
-                gzip \
-                wget \
-                telnet \
-                unzip \
-                iputils \
-                ; \
-        microdnf clean all
+RUN apt-get update && apt-get install -y \
+    curl \
+    wget\
+ && rm -rf /var/lib/apt/lists/*
+ RUN apt-get clean all
 
 # Install JMeter
 RUN   mkdir /jmeter \
