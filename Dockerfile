@@ -1,4 +1,4 @@
-FROM openjdk:18-oracle
+FROM openjdk:20-ea-16-slim-bullseye
 
 # JMeter version
 ARG JMETER_VERSION=5.0
