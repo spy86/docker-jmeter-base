@@ -1,4 +1,4 @@
-FROM openjdk:21-ea-4-slim-bullseye
+FROM openjdk:21-ea-10-jdk-slim
 
 # JMeter version
 ARG JMETER_VERSION=5.0
