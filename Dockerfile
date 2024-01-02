@@ -1,4 +1,4 @@
-FROM openjdk:22-ea-18-jdk-slim
+FROM openjdk:22-ea-28-jdk-oracle
 
 # JMeter version
 ARG JMETER_VERSION=5.0
